@@ -1,0 +1,150 @@
+### Terraform ###
+# Compiled files
+**/*.tfstate
+**/*.tfplan
+**/*.tfstate.backup
+**/.terraform
+**/.terraform/*
+
+# Scaffold Plugin Cache
+**/plugin-cache/**/*
+
+### OSX ###
+**/.DS_Store
+**/.AppleDouble
+**/.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+.gitlab-ci-local
+.zip
+.idea/
+
+**/node_modules
+
+# explicitly don't track output of the aws service quota comparator
+**/aws-service-quota-comparator/output/*.json
+
+# explicitly don't track these files because they are
+# dynamically created by the pipeline
+etc/group_cicd_plan_only.tfvars
+cflambda-prime.zip
+dashboard-*.json.tmpl
+*.min.js
+
+# explicitly don't track content of components/app/lambda_auth/build/*
+# because it is dynamically created by the pipeline
+components/app/lambda_auth/build/*
+
+# explicitly don't track *_output.txt files generated from local tf runs
+*_output.txt
+
+# explicitly don't track files we have chosen to ignore by suffixing with .gitignorethis
+*.gitignorethis*
+
+# explicitly don't track local copies of dynamic environment tfvars files
+etc/env_eu-west-2_de-*.tfvars
+
+# don't track target-env.tfvars that are dynamically created
+group_target-env.tfvars
+
+# explicitly don't track local copies of terraform output json files
+*_output.json
+*_*.tfplan*.json
+*.tfplan.json
+
+# don't track zips
+*.zip
+
+# don't track ephemeral pipeline config files
+target-env.json
+base-env.json
+
+# don't track environment files
+.env
+.env.db
+.envrc
+
+# don't track dynamic environment files (they're dynamic, that's the point!)
+env_eu-west-2_de-*.tfvars
+env_eu-west-2_de2-*.tfvars
+**/templates/dashboard-*.tmpl.json
+
+# don't track eslint local changes
+.eslintcache
+
+# VSCode Cache
+.vscode
+!.vscode/settings.json
+
+# don't track ephemeral local build files
+.webpack
+.next
+dist*/
+static_content/
+.turbo/
+reports/
+target/
+.build
+
+# don't track local developer environment log files from vscode etc
+.vscode/*.log
+
+# don't track local test reports
+playwright-report/
+reports
+api_apply_output.tmp
+**/*.tmp
+test-artifacts/
+**/test-results/
+**/playwright-report/
+**/playwright/.cache/
+
+# Ignore npm package lock files, as pnpm is used.
+package-lock.json
+
+openapi3_spec_*.yml
+*.tmp
+.yarn
+
+yarn-install_*
+yarn-error.log
+
+**/lambda-local
+**/data_layer/entities_wip
+
+# Ignore Microsoft Suite backup files
+~$*
+
+local_logs.txt
+
+# Ignore temporary data files
+**/data/temp
+
+# Ignore temporary files created by vim
+**/.*.swp
+
+# Ignore pycache files
+**/__pycache__/**
+
+# Ignore coverage files
+.coverage
